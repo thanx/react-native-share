@@ -67,6 +67,14 @@
           NSString *URL = [NSString stringWithFormat:@"https://www.facebook.com/sharer/sharer.php?u=%@", options[@"url"]];
           [self openScheme:URL];
         }
+        
+        if ([options[@"social"] isEqualToString:@"facebook"]) {
+          NSString *sms = @"sms:+1234567890&body=This is the body.";
+          NSString *URL = [sms stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
+          [self openScheme:URL];
+        }
+        
+        
 
       }
   }

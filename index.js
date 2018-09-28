@@ -154,6 +154,7 @@ class RNShare {
     WHATSAPP: NativeModules.RNShare.WHATSAPP || 'whatsapp',
     INSTAGRAM: NativeModules.RNShare.INSTAGRAM || 'instagram',
     GOOGLEPLUS: NativeModules.RNShare.GOOGLEPLUS || 'googleplus',
+    SMS: NativeModules.RNShare.SMS || 'sms',
     EMAIL: NativeModules.RNShare.EMAIL || 'email',
     PINTEREST: NativeModules.RNShare.PINTEREST || 'pinterest',
   };
