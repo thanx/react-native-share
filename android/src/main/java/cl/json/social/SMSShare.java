@@ -6,7 +6,7 @@ import com.facebook.react.bridge.ReactApplicationContext;
 import com.facebook.react.bridge.ReadableMap;
 
 /**
- * Created by disenodosbbcl on 23-07-16.
+ * Created by alexgomezalanis on 28-09-18.
  */
 public class SMSShare extends SingleShareIntent {
 
@@ -24,7 +24,7 @@ public class SMSShare extends SingleShareIntent {
     @Override
     protected String getPackage() {
         if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.KITKAT) {
-            Telephony.Sms.getDefaultSmsPackage(this);
+            return null;
         } else {
             return PACKAGE;
         }
