@@ -13,10 +13,10 @@ RCT_EXPORT_MODULE();
     failureCallback:(RCTResponseErrorBlock)failureCallback
     successCallback:(RCTResponseSenderBlock)successCallback {
     
-    NSLog(@"Try open view");
+    NSLog(@"Try open Message");
     
-    if ([options objectForKey:@"url"] && [options objectForKey:@"url"] != [NSNull null]) {
-        NSString *url = [NSString stringWithFormat:@"sms:body=%@", options[@"url"]];
+    if ([options objectForKey:@"message"] && [options objectForKey:@"message"] != [NSNull null]) {
+        NSString *url = [NSString stringWithFormat:@"sms:&body=%@", options[@"message"]];
         NSURL *smsURL = [NSURL URLWithString:[url stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding]];
         
         if ([[UIApplication sharedApplication] canOpenURL: smsURL]) {
@@ -24,7 +24,7 @@ RCT_EXPORT_MODULE();
             successCallback(@[]);
         } else {
             // Cannot open SMS
-            NSLog(@"error web intent");
+            NSLog(@"error message intent");
         }
     }
 }
