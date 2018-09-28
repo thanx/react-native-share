@@ -25,6 +25,7 @@ import cl.json.social.TwitterShare;
 import cl.json.social.WhatsAppShare;
 import cl.json.social.InstagramShare;
 import cl.json.social.PinterestShare;
+import cl.json.social.SMSShare;
 
 public class RNShareModule extends ReactContextBaseJavaModule {
 
@@ -38,6 +39,7 @@ public class RNShareModule extends ReactContextBaseJavaModule {
         instagram,
         googleplus,
         email,
+        sms,
         pinterest;
 
         public static ShareIntent getShareClass(String social, ReactApplicationContext reactContext) {
@@ -61,6 +63,8 @@ public class RNShareModule extends ReactContextBaseJavaModule {
                     return new EmailShare(reactContext);
                 case pinterest:
                     return new PinterestShare(reactContext);
+                case sms:
+                    return new SMSShare(reactContext);
                 default:
                     return null;
             }
