@@ -12,7 +12,7 @@ public class SMSShare extends SingleShareIntent {
 
     private static final String PACKAGE = "vnd.android-dir/mms-sms";
 
-    public EmailShare(ReactApplicationContext reactContext) {
+    public SMSShare(ReactApplicationContext reactContext) {
         super(reactContext);
     }
     @Override
